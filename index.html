@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daiiv Journals — Daivik Suresh</title>
+  <title>Daivik's Journals — Supply Chain & Market Insights</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -34,7 +34,7 @@
       overflow-x: hidden;
     }
 
-    /* ── NAV ── */
+    /* NAV */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -88,7 +88,7 @@
     }
     .nav-links a:hover { color: var(--red-light); }
 
-    /* ── HERO ── */
+    /* HERO */
     .hero {
       position: relative;
       height: 100vh;
@@ -190,7 +190,7 @@
       50% { transform: translateY(6px); }
     }
 
-    /* ── ABOUT ── */
+    /* ABOUT */
     .about {
       padding: 5rem 2rem;
       max-width: 900px;
@@ -227,7 +227,7 @@
       margin: 2rem auto;
     }
 
-    /* ── YEAR SECTIONS ── */
+    /* YEAR SECTIONS */
     .journals-section {
       padding: 4rem 2rem 6rem;
       max-width: 1300px;
@@ -258,7 +258,7 @@
       text-transform: uppercase;
     }
 
-    /* ── JOURNAL GRID ── */
+    /* JOURNAL GRID */
     .journal-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -282,7 +282,6 @@
       box-shadow: 0 20px 60px rgba(192,57,43,0.2);
     }
 
-    /* card image */
     .card-image {
       position: relative;
       height: 200px;
@@ -297,13 +296,13 @@
     .journal-card:hover .card-image img {
       transform: scale(1.06);
     }
+
     .card-image-overlay {
       position: absolute;
       inset: 0;
       background: linear-gradient(to bottom, transparent 30%, rgba(20,20,20,0.9) 100%);
     }
 
-    /* gradient cover for cards without photos */
     .card-gradient {
       width: 100%;
       height: 100%;
@@ -329,7 +328,6 @@
       background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     }
 
-    /* gradient palettes per month */
     .grad-aug   { background: linear-gradient(135deg, #1a0533, #3d0c5e, #8B0000); }
     .grad-sep   { background: linear-gradient(135deg, #0d2137, #1a4a6b, #0d4a3c); }
     .grad-oct   { background: linear-gradient(135deg, #2d1500, #6b3300, #8B0000); }
@@ -343,7 +341,6 @@
     .grad-jun   { background: linear-gradient(135deg, #0a1a00, #1f3d00, #1a0a20); }
     .grad-jul   { background: linear-gradient(135deg, #1a0a00, #3d1a00, #3d0000); }
 
-    /* card date badge */
     .card-date-badge {
       position: absolute;
       top: 12px;
@@ -359,7 +356,6 @@
       z-index: 3;
     }
 
-    /* card body */
     .card-body {
       padding: 1.2rem 1.4rem 1.4rem;
     }
@@ -383,7 +379,7 @@
       gap: 0.5rem;
     }
     .card-topics li::before {
-      content: '▸';
+      content: '\25B8';
       color: var(--red);
       flex-shrink: 0;
       margin-top: 1px;
@@ -401,7 +397,7 @@
     }
     .journal-card:hover .card-cta { gap: 0.7rem; }
 
-    /* ── FOOTER ── */
+    /* FOOTER */
     footer {
       border-top: 1px solid var(--border);
       padding: 2.5rem 2rem;
@@ -438,9 +434,10 @@
 <nav>
   <a class="nav-logo" href="index.html">
     <div class="logo-icon">DS</div>
-    <span>Daiiv Journals</span>
+    <span>Daivik's Journals</span>
   </a>
   <ul class="nav-links">
+    <li><a href="#2026">2026</a></li>
     <li><a href="#2025">2025</a></li>
     <li><a href="#2024">2024</a></li>
     <li><a href="#2023">2023</a></li>
@@ -454,15 +451,15 @@
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <span class="hero-eyebrow">Supply Chain &amp; Market Insights</span>
-    <h1 class="hero-title"><span>Daiiv</span> Journals</h1>
-    <p class="hero-subtitle">Journey of Daivik Suresh</p>
+    <h1 class="hero-title"><span>Daivik's</span> Journals</h1>
+    <p class="hero-subtitle">Supply Chain &amp; Market Insights</p>
     <p class="hero-desc">
-      Monthly deep-dives into supply chain, logistics, freight markets, and global economics.
-      Written since August 2023 — tracking the trends that shape how our world moves.
+      Monthly deep-dives into supply chain, logistics, freight markets, and global economics &mdash;
+      tracking the trends that shape how our world moves.
     </p>
     <div class="hero-stats">
       <div class="hero-stat">
-        <div class="num">29</div>
+        <div class="num">33</div>
         <div class="label">Journals</div>
       </div>
       <div class="hero-stat">
@@ -474,8 +471,8 @@
         <div class="label">Focus</div>
       </div>
     </div>
-    <a href="#2025" class="scroll-cta">
-      Explore Journals ↓
+    <a href="#2026" class="scroll-cta">
+      Explore Journals &darr;
     </a>
   </div>
 </section>
@@ -486,12 +483,95 @@
   <h2 class="section-title">Where Supply Chain Meets Insight</h2>
   <div class="divider"></div>
   <p class="about-text">
-    Every month since August 2023, Daivik Suresh — NYU Stern student in Business Analytics &amp; AI and Supply Chain Management —
+    Daivik Suresh &mdash; NYU Stern student in Business Analytics &amp; AI and Supply Chain Management &mdash;
     publishes a deep-dive journal covering the trends, disruptions, and innovations shaping global supply chains.
     From PMI readings and crude oil fluctuations to AI-driven logistics and geopolitical trade dynamics,
     these journals spark conversation and share knowledge freely.
-    <em>"At the EOD, how we supposed to grow if we don't share the wealth?"</em>
   </p>
+</section>
+
+<!-- JOURNALS: 2026 -->
+<section class="journals-section" id="2026">
+  <div class="year-header">
+    <div class="year-label">2026</div>
+    <div class="year-line"></div>
+    <div class="year-count">4 Journals</div>
+  </div>
+  <div class="journal-grid">
+
+    <!-- APR 2026 -->
+    <a class="journal-card" href="journals/2026/april.html">
+      <div class="card-image">
+        <img src="assets/images/journal-2026-apr.png" alt="April 2026" />
+        <div class="card-image-overlay"></div>
+        <span class="card-date-badge">Apr 2026</span>
+      </div>
+      <div class="card-body">
+        <div class="card-month">April 2026</div>
+        <ul class="card-topics">
+          <li>Data Center Supply Chains</li>
+          <li>AI Infrastructure Boom</li>
+          <li>Energy Grid Strain &amp; Power Demand</li>
+        </ul>
+        <span class="card-cta">Read More &rarr;</span>
+      </div>
+    </a>
+
+    <!-- MAR 2026 -->
+    <a class="journal-card" href="journals/2026/march.html">
+      <div class="card-image">
+        <img src="assets/images/journal-2026-mar.png" alt="March 2026" />
+        <div class="card-image-overlay"></div>
+        <span class="card-date-badge">Mar 2026</span>
+      </div>
+      <div class="card-body">
+        <div class="card-month">March 2026</div>
+        <ul class="card-topics">
+          <li>Oil Markets &amp; OPEC+ Strategy</li>
+          <li>Tariff Escalation &amp; Supply Chain Rerouting</li>
+          <li>Freight Rate Recovery Signals</li>
+        </ul>
+        <span class="card-cta">Read More &rarr;</span>
+      </div>
+    </a>
+
+    <!-- FEB 2026 -->
+    <a class="journal-card" href="journals/2026/february.html">
+      <div class="card-image">
+        <img src="assets/images/journal-2026-feb.png" alt="February 2026" />
+        <div class="card-image-overlay"></div>
+        <span class="card-date-badge">Feb 2026</span>
+      </div>
+      <div class="card-body">
+        <div class="card-month">February 2026</div>
+        <ul class="card-topics">
+          <li>Geopolitical Conflicts &amp; Supply Chain Risk</li>
+          <li>Russia-Ukraine &amp; Middle East Tensions</li>
+          <li>Defense Supply Chain &amp; Reshoring</li>
+        </ul>
+        <span class="card-cta">Read More &rarr;</span>
+      </div>
+    </a>
+
+    <!-- JAN 2026 -->
+    <a class="journal-card" href="journals/2026/january.html">
+      <div class="card-image">
+        <img src="assets/images/journal-2026-jan.png" alt="January 2026" />
+        <div class="card-image-overlay"></div>
+        <span class="card-date-badge">Jan 2026</span>
+      </div>
+      <div class="card-body">
+        <div class="card-month">January 2026</div>
+        <ul class="card-topics">
+          <li>2026 Supply Chain Outlook</li>
+          <li>Agentic AI Goes Mainstream</li>
+          <li>Reshoring Milestones &amp; CHIPS Act Progress</li>
+        </ul>
+        <span class="card-cta">Read More &rarr;</span>
+      </div>
+    </a>
+
+  </div>
 </section>
 
 <!-- JOURNALS: 2025 -->
@@ -503,12 +583,9 @@
   </div>
   <div class="journal-grid">
 
-    <!-- DEC 2025 -->
     <a class="journal-card" href="journals/2025/december.html">
       <div class="card-image">
-        <div class="card-gradient grad-dec">
-          <div class="grad-month">End of Year<br/>Reflection</div>
-        </div>
+        <img src="assets/images/journal-2025-dec.png" alt="December 2025" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">Dec 2025</span>
       </div>
@@ -519,16 +596,13 @@
           <li>Key Trends That Defined the Year</li>
           <li>2026 Outlook &amp; Predictions</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-    <!-- NOV 2025 -->
     <a class="journal-card" href="journals/2025/november.html">
       <div class="card-image">
-        <div class="card-gradient grad-nov">
-          <div class="grad-month">Peak Season<br/>Logistics</div>
-        </div>
+        <img src="assets/images/journal-2025-nov.png" alt="November 2025" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">Nov 2025</span>
       </div>
@@ -539,16 +613,13 @@
           <li>Last-Mile Delivery Innovations</li>
           <li>Black Friday &amp; Peak Season Logistics</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-    <!-- OCT 2025 -->
     <a class="journal-card" href="journals/2025/october.html">
       <div class="card-image">
-        <div class="card-gradient grad-oct">
-          <div class="grad-month">Sustainability<br/>&amp; Reusability</div>
-        </div>
+        <img src="assets/images/journal-2025-oct.png" alt="October 2025" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">Oct 2025</span>
       </div>
@@ -559,16 +630,13 @@
           <li>Circular Economy &amp; Reusability</li>
           <li>Reducing Carbon Footprints</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-    <!-- SEP 2025 -->
     <a class="journal-card" href="journals/2025/september.html">
       <div class="card-image">
-        <div class="card-gradient grad-sep">
-          <div class="grad-month">Security<br/>&amp; Warehousing</div>
-        </div>
+        <img src="assets/images/journal-2025-sep.png" alt="September 2025" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">Sep 2025</span>
       </div>
@@ -578,16 +646,13 @@
           <li>Bonded Warehousing</li>
           <li>Cybersecurity in Supply Chains</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-    <!-- AUG 2025 -->
     <a class="journal-card" href="journals/2025/august.html">
       <div class="card-image">
-        <div class="card-gradient grad-aug">
-          <div class="grad-month">The AI<br/>Revolution</div>
-        </div>
+        <img src="assets/images/journal-2025-aug.png" alt="August 2025" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">Aug 2025</span>
       </div>
@@ -599,16 +664,13 @@
           <li>AI in Demand Forecasting</li>
           <li>The Rise of Agentic AI</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-    <!-- JUL 2025 -->
     <a class="journal-card" href="journals/2025/july.html">
       <div class="card-image">
-        <div class="card-gradient grad-jul">
-          <div class="grad-month">Manufacturing<br/>&amp; Reshoring</div>
-        </div>
+        <img src="assets/images/journal-2025-jul.png" alt="July 2025" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">Jul 2025</span>
       </div>
@@ -619,16 +681,13 @@
           <li>Reshoring Trends</li>
           <li>Equities to Watch</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-    <!-- JUN 2025 -->
     <a class="journal-card" href="journals/2025/june.html">
       <div class="card-image">
-        <div class="card-gradient grad-jun">
-          <div class="grad-month">War &amp;<br/>Policy</div>
-        </div>
+        <img src="assets/images/journal-2025-jun.png" alt="June 2025" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">Jun 2025</span>
       </div>
@@ -638,16 +697,13 @@
           <li>Wartime Supply Chain Logistics</li>
           <li>The One Big Beautiful Bill Act (OBBBA) in SCM</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-    <!-- MAY 2025 -->
     <a class="journal-card" href="journals/2025/may.html">
       <div class="card-image">
-        <div class="card-gradient grad-may">
-          <div class="grad-month">Demand<br/>Planning</div>
-        </div>
+        <img src="assets/images/journal-2025-may.png" alt="May 2025" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">May 2025</span>
       </div>
@@ -658,16 +714,13 @@
           <li>The Future of Data-Driven Decisions</li>
           <li>AI &amp; Digital Twins in Forecasting</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-    <!-- APR 2025 -->
     <a class="journal-card" href="journals/2025/april.html">
       <div class="card-image">
-        <div class="card-gradient grad-apr">
-          <div class="grad-month">Semiconductor<br/>Supply Chains</div>
-        </div>
+        <img src="assets/images/journal-2025-apr.png" alt="April 2025" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">Apr 2025</span>
       </div>
@@ -678,16 +731,13 @@
           <li>CHIPS Act &amp; Reshoring Efforts</li>
           <li>Geopolitics &amp; Taiwan</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-    <!-- MAR 2025 -->
     <a class="journal-card" href="journals/2025/march.html">
       <div class="card-image">
-        <div class="card-gradient grad-mar">
-          <div class="grad-month">Trade Canals<br/>&amp; Robotics</div>
-        </div>
+        <img src="assets/images/journal-2025-mar.png" alt="March 2025" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">Mar 2025</span>
       </div>
@@ -698,16 +748,13 @@
           <li>Robotics in Warehousing</li>
           <li>Houston Ship Channel Expansion</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-    <!-- FEB 2025 -->
     <a class="journal-card" href="journals/2025/february.html">
       <div class="card-image">
-        <div class="card-gradient grad-feb">
-          <div class="grad-month">Inventory<br/>Optimization</div>
-        </div>
+        <img src="assets/images/journal-2025-feb.png" alt="February 2025" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">Feb 2025</span>
       </div>
@@ -718,16 +765,13 @@
           <li>Demand Forecasting</li>
           <li>Supply Chain Resilience</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-    <!-- JAN 2025 -->
     <a class="journal-card" href="journals/2025/january.html">
       <div class="card-image">
-        <div class="card-gradient grad-jan">
-          <div class="grad-month">Tariffs &amp;<br/>Trade Wars</div>
-        </div>
+        <img src="assets/images/journal-2025-jan.png" alt="January 2025" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">Jan 2025</span>
       </div>
@@ -738,11 +782,11 @@
           <li>Trade Wars</li>
           <li>Reshoring &amp; Nearshoring</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-  </div><!-- /journal-grid 2025 -->
+  </div>
 </section>
 
 <!-- JOURNALS: 2024 -->
@@ -754,12 +798,9 @@
   </div>
   <div class="journal-grid">
 
-    <!-- DEC 2024 -->
     <a class="journal-card" href="journals/2024/december.html">
       <div class="card-image">
-        <div class="card-gradient grad-dec">
-          <div class="grad-month">Year in<br/>Review</div>
-        </div>
+        <img src="assets/images/journal-2024-dec.png" alt="December 2024" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">Dec 2024</span>
       </div>
@@ -770,16 +811,13 @@
           <li>Markets &amp; Supply Chain Year Review</li>
           <li>2025 Outlook</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-    <!-- NOV 2024 -->
     <a class="journal-card" href="journals/2024/november.html">
       <div class="card-image">
-        <div class="card-gradient grad-nov">
-          <div class="grad-month">Post-Election<br/>Outlook</div>
-        </div>
+        <img src="assets/images/journal-2024-nov.png" alt="November 2024" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">Nov 2024</span>
       </div>
@@ -790,14 +828,13 @@
           <li>Market Reaction &amp; Outlook</li>
           <li>Trade Policy Shifts</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-    <!-- OCT 2024 -->
     <a class="journal-card" href="journals/2024/october.html">
       <div class="card-image">
-        <img src="assets/images/bear-dark.jpg" alt="October 2024" />
+        <img src="assets/images/journal-2024-oct.png" alt="October 2024" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">Oct 2024</span>
       </div>
@@ -806,18 +843,15 @@
         <ul class="card-topics">
           <li>East Coast Port Strike</li>
           <li>ILA Workers &amp; Automation</li>
-          <li>The Evolution of Ports (1.0 → 4.0)</li>
+          <li>The Evolution of Ports (1.0 &rarr; 4.0)</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-    <!-- SEP 2024 -->
     <a class="journal-card" href="journals/2024/september.html">
       <div class="card-image">
-        <div class="card-gradient grad-sep">
-          <div class="grad-month">Nuclear<br/>&amp; Rate Cuts</div>
-        </div>
+        <img src="assets/images/journal-2024-sep.png" alt="September 2024" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">Sep 2024</span>
       </div>
@@ -827,16 +861,13 @@
           <li>Nuclear Energy in SCM</li>
           <li>Rate Cuts &amp; Supply Chain Impact</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-    <!-- AUG 2024 -->
     <a class="journal-card" href="journals/2024/august.html">
       <div class="card-image">
-        <div class="card-gradient grad-aug">
-          <div class="grad-month">Quantum<br/>Computing</div>
-        </div>
+        <img src="assets/images/journal-2024-aug.png" alt="August 2024" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">Aug 2024</span>
       </div>
@@ -847,16 +878,13 @@
           <li>Optimization &amp; Route Scheduling</li>
           <li>1 Year Journal Anniversary</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-    <!-- JUL 2024 -->
     <a class="journal-card" href="journals/2024/july.html">
       <div class="card-image">
-        <div class="card-gradient grad-jul">
-          <div class="grad-month">Maritime<br/>&amp; Elections</div>
-        </div>
+        <img src="assets/images/journal-2024-jul.png" alt="July 2024" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">Jul 2024</span>
       </div>
@@ -867,16 +895,13 @@
           <li>Labor Market &amp; GDP Growth</li>
           <li>Rate Cuts &amp; Election Season</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-    <!-- JUN 2024 -->
     <a class="journal-card" href="journals/2024/june.html">
       <div class="card-image">
-        <div class="card-gradient grad-jun">
-          <div class="grad-month">Robotics &amp;<br/>Quantum</div>
-        </div>
+        <img src="assets/images/journal-2024-jun.png" alt="June 2024" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">Jun 2024</span>
       </div>
@@ -887,16 +912,13 @@
           <li>AI-Powered Demand Forecasting</li>
           <li>Quantum Computing in Logistics</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-    <!-- MAY 2024 -->
     <a class="journal-card" href="journals/2024/may.html">
       <div class="card-image">
-        <div class="card-gradient grad-may">
-          <div class="grad-month">Crude Oil &amp;<br/>Digital Twins</div>
-        </div>
+        <img src="assets/images/journal-2024-may.png" alt="May 2024" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">May 2024</span>
       </div>
@@ -908,14 +930,13 @@
           <li>Emerging Technologies</li>
           <li>Inflation &amp; CPI</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-    <!-- APR 2024 -->
     <a class="journal-card" href="journals/2024/april.html">
       <div class="card-image">
-        <img src="assets/images/bear-april.jpg" alt="April 2024" />
+        <img src="assets/images/journal-2024-apr.png" alt="April 2024" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">Apr 2024</span>
       </div>
@@ -927,16 +948,13 @@
           <li>Self-Driving Trucks</li>
           <li>Inflation &amp; CPI</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-    <!-- MAR 2024 -->
     <a class="journal-card" href="journals/2024/march.html">
       <div class="card-image">
-        <div class="card-gradient grad-mar">
-          <div class="grad-month">Generative<br/>AI &amp; Crypto</div>
-        </div>
+        <img src="assets/images/journal-2024-mar.png" alt="March 2024" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">Mar 2024</span>
       </div>
@@ -948,16 +966,13 @@
           <li>Emerging Technologies</li>
           <li>Inflation</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-    <!-- FEB 2024 -->
     <a class="journal-card" href="journals/2024/february.html">
       <div class="card-image">
-        <div class="card-gradient grad-feb">
-          <div class="grad-month">3D Printing<br/>&amp; AV Trucks</div>
-        </div>
+        <img src="assets/images/journal-2024-feb.png" alt="February 2024" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">Feb 2024</span>
       </div>
@@ -969,16 +984,13 @@
           <li>Blockchain &amp; BTC ETF</li>
           <li>Emerging Technologies</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-    <!-- JAN 2024 -->
     <a class="journal-card" href="journals/2024/january.html">
       <div class="card-image">
-        <div class="card-gradient grad-jan">
-          <div class="grad-month">New Year<br/>New Market</div>
-        </div>
+        <img src="assets/images/journal-2024-jan.png" alt="January 2024" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">Jan 2024</span>
       </div>
@@ -990,11 +1002,11 @@
           <li>Houthi Red Sea Tensions</li>
           <li>Bitcoin ETF Approval</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-  </div><!-- /journal-grid 2024 -->
+  </div>
 </section>
 
 <!-- JOURNALS: 2023 -->
@@ -1006,12 +1018,9 @@
   </div>
   <div class="journal-grid">
 
-    <!-- DEC 2023 -->
     <a class="journal-card" href="journals/2023/december.html">
       <div class="card-image">
-        <div class="card-gradient grad-dec">
-          <div class="grad-month">EOY 2023<br/>Recap</div>
-        </div>
+        <img src="assets/images/journal-2023-dec.jpg" alt="December 2023" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">Dec 2023</span>
       </div>
@@ -1022,16 +1031,13 @@
           <li>AI &amp; Blockchain Advances</li>
           <li>Federal Reserve &amp; Rate Outlook</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-    <!-- NOV 2023 -->
     <a class="journal-card" href="journals/2023/november.html">
       <div class="card-image">
-        <div class="card-gradient grad-nov">
-          <div class="grad-month">Holiday<br/>Season Prep</div>
-        </div>
+        <img src="assets/images/journal-2023-nov.jpg" alt="November 2023" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">Nov 2023</span>
       </div>
@@ -1042,16 +1048,13 @@
           <li>Freight Market Outlook</li>
           <li>Retail &amp; Consumer Trends</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-    <!-- OCT 2023 -->
     <a class="journal-card" href="journals/2023/october.html">
       <div class="card-image">
-        <div class="card-gradient grad-oct">
-          <div class="grad-month">Market<br/>Correction</div>
-        </div>
+        <img src="assets/images/journal-2023-oct.jpg" alt="October 2023" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">Oct 2023</span>
       </div>
@@ -1062,14 +1065,13 @@
           <li>Crude Oil &amp; Geopolitical Tensions</li>
           <li>Supply Chain Innovations</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-    <!-- SEP 2023 -->
     <a class="journal-card" href="journals/2023/september.html">
       <div class="card-image">
-        <img src="assets/images/bears-reading.jpg" alt="September 2023" />
+        <img src="assets/images/journal-2023-sep.jpg" alt="September 2023" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">Sep 2023</span>
       </div>
@@ -1081,37 +1083,36 @@
           <li>AI in Supply Chain</li>
           <li>Bull &amp; Bear Watchlist</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-    <!-- AUG 2023 -->
     <a class="journal-card" href="journals/2023/august.html">
       <div class="card-image">
-        <img src="assets/images/bull-tightrope.jpg" alt="August 2023" />
+        <img src="assets/images/journal-2023-aug.jpg" alt="August 2023" />
         <div class="card-image-overlay"></div>
         <span class="card-date-badge">Aug 2023</span>
       </div>
       <div class="card-body">
-        <div class="card-month">August 2023 — Inaugural Issue</div>
+        <div class="card-month">August 2023 &mdash; Inaugural Issue</div>
         <ul class="card-topics">
           <li>PMI &amp; Manufacturing Slowdown</li>
           <li>Freight Markets &amp; Oil Prices</li>
           <li>Chip Shortage &amp; EV Trucking</li>
           <li>Truck Driver Shortage</li>
         </ul>
-        <span class="card-cta">Read More →</span>
+        <span class="card-cta">Read More &rarr;</span>
       </div>
     </a>
 
-  </div><!-- /journal-grid 2023 -->
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Daiiv Journals</div>
-  <p style="margin-bottom:0.5rem;">By <a href="https://daiviksuresh.com" target="_blank">Daivik Suresh</a> · NYU Stern | Business Analytics &amp; AI | Supply Chain Management</p>
-  <p>© 2023–2025 · All journals published monthly · Not financial advice</p>
+  <div class="footer-logo">Daivik Suresh</div>
+  <p style="margin-bottom:0.5rem;">By <a href="https://daiviksuresh.com" target="_blank">Daivik Suresh</a> &middot; NYU Stern | Business Analytics &amp; AI | Supply Chain Management</p>
+  <p>&copy; 2023&ndash;2026 &middot; All journals published monthly &middot; Not financial advice</p>
 </footer>
 
 </body>
