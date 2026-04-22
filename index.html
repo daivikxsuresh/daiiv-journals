@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    // Intercept Supabase auth tokens and forward to WristDesk Pro
+    (function(){
+      var h=window.location.hash,q=window.location.search;
+      if((h&&(h.includes('access_token')||h.includes('type=recovery')||h.includes('type=signup')))||(q&&q.includes('code='))){
+        window.location.replace('/wristdesk/'+h+q);
+      }
+    })();
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Daivik Suresh</title>
