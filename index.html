@@ -436,9 +436,31 @@
       .year-label { font-size: 2.5rem; }
       .journal-grid { grid-template-columns: 1fr; }
     }
+
+    /* SCROLL POLISH */
+    #scroll-progress {
+      position: fixed;
+      top: 0; left: 0;
+      height: 3px;
+      width: 0%;
+      background: linear-gradient(90deg, var(--red), var(--gold));
+      z-index: 200;
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      html { scroll-behavior: auto; }
+    }
   </style>
 </head>
 <body>
+
+<div id="scroll-progress"></div>
 
 <!-- NAV -->
 <nav>
@@ -447,6 +469,7 @@
     <span>Daivik's Journals</span>
   </a>
   <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
     <li><a href="#2026">2026</a></li>
     <li><a href="#2025">2025</a></li>
     <li><a href="#2024">2024</a></li>
@@ -1158,6 +1181,46 @@
   <p style="margin-bottom:0.5rem;">By <a href="https://daiviksuresh.com" target="_blank">Daivik Suresh</a> &middot; NYU Stern | Business Analytics &amp; AI | Supply Chain Management</p>
   <p>&copy; 2023&ndash;2026 &middot; All journals published monthly &middot; Not financial advice</p>
 </footer>
+
+<script>
+(function () {
+  var bar = document.getElementById('scroll-progress');
+  function progress() {
+    var h = document.documentElement;
+    var max = h.scrollHeight - h.clientHeight;
+    bar.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+  }
+  window.addEventListener('scroll', progress, { passive: true });
+  progress();
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var cards = document.querySelectorAll('.journal-card, .about');
+  cards.forEach(function (el, i) {
+    el.classList.add('reveal');
+    el.style.transitionDelay = (i % 3) * 0.08 + 's';
+  });
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  cards.forEach(function (el) { io.observe(el); });
+
+  var heroBg = document.querySelector('.hero-bg');
+  if (heroBg) {
+    window.addEventListener('scroll', function () {
+      var y = window.scrollY;
+      if (y < window.innerHeight) {
+        heroBg.style.transform = 'translateY(' + y * 0.18 + 'px) scale(1.05)';
+      }
+    }, { passive: true });
+  }
+})();
+</script>
 
 </body>
 </html>
