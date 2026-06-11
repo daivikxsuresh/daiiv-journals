@@ -4,6 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>September 2023 — Daiiv Journals</title>
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Port Congestion, Yellow&#x27;s Collapse &amp; The Rise of AI" />
+  <meta property="og:description" content="Money is a tool, not a goal." />
+  <meta property="og:image" content="https://daiviksuresh.com/assets/images/hero.jpeg" />
+  <meta property="og:url" content="https://daiviksuresh.com/journals/2023/september.html" />
+  <meta property="og:site_name" content="Daivik's Journals" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="description" content="Money is a tool, not a goal." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -155,5 +163,30 @@
 
   </div>
 
+
+<div id="scroll-progress" style="position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,#c0392b,#d4a843);z-index:200;"></div>
+<script id="journal-scroll-js">
+(function(){
+  var bar=document.getElementById('scroll-progress');
+  var key='daiiv-pos:'+location.pathname;
+  function prog(){var h=document.documentElement,m=h.scrollHeight-h.clientHeight;bar.style.width=(m>0?(h.scrollTop/m)*100:0)+'%';}
+  window.addEventListener('scroll',prog,{passive:true});prog();
+  /* save reading position */
+  var t;window.addEventListener('scroll',function(){clearTimeout(t);t=setTimeout(function(){
+    try{var h=document.documentElement,m=h.scrollHeight-h.clientHeight;
+    if(h.scrollTop>300&&h.scrollTop<m-300)localStorage.setItem(key,h.scrollTop);
+    else if(h.scrollTop>=m-300)localStorage.removeItem(key);}catch(e){}},200);},{passive:true});
+  /* offer to resume */
+  try{var saved=parseInt(localStorage.getItem(key),10);
+  if(saved>300){var b=document.createElement('div');
+    b.innerHTML='<span>Continue where you left off?</span><button id="resume-y">Resume</button><button id="resume-n">&times;</button>';
+    b.style.cssText='position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#1a1a1a;border:1px solid #d4a843;border-radius:30px;padding:10px 18px;display:flex;gap:12px;align-items:center;z-index:300;font-family:Inter,sans-serif;font-size:0.82rem;color:#f0f0f0;box-shadow:0 10px 40px rgba(0,0,0,0.6)';
+    b.querySelectorAll('button').forEach(function(btn){btn.style.cssText='background:none;border:none;color:#d4a843;font-weight:600;cursor:pointer;font-size:0.82rem'});
+    document.body.appendChild(b);
+    document.getElementById('resume-y').onclick=function(){window.scrollTo({top:saved,behavior:'smooth'});b.remove();};
+    document.getElementById('resume-n').onclick=function(){localStorage.removeItem(key);b.remove();};
+    setTimeout(function(){if(b.parentNode)b.remove();},12000);}}catch(e){}
+})();
+</script>
 </body>
 </html>
