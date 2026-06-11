@@ -510,10 +510,68 @@
       .tl-entry:nth-child(odd).reveal { transform: translateY(28px); }
       .stats-inner { grid-template-columns: repeat(2, 1fr); }
     }
+
+    /* MOBILE NAV */
+    .nav-burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 102;
+    }
+    .nav-burger span {
+      width: 22px; height: 2px;
+      background: var(--text);
+      transition: transform 0.3s, opacity 0.3s;
+      border-radius: 2px;
+    }
+    .nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-burger.open span:nth-child(2) { opacity: 0; }
+    .nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 64px; left: 0; right: 0;
+      background: rgba(10,10,10,0.98);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      z-index: 101;
+      padding: 1rem 0 1.5rem;
+      flex-direction: column;
+      transform: translateY(-8px);
+      opacity: 0;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+      pointer-events: none;
+    }
+    .mobile-menu.open {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .mobile-menu a {
+      display: block;
+      padding: 0.9rem 2rem;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      border-bottom: 1px solid rgba(42,42,42,0.5);
+      transition: color 0.2s, padding-left 0.2s;
+    }
+    .mobile-menu a:active, .mobile-menu a:hover { color: var(--gold); padding-left: 2.4rem; }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a.gold { color: var(--gold); }
+    @media (max-width: 600px) {
+      .nav-burger { display: flex; }
+      .mobile-menu { display: flex; }
+    }
     @media (max-width: 600px) {
       nav { padding: 0 1.2rem; }
-      .nav-links { gap: 1rem; }
-      .nav-links li:nth-child(n+2):nth-child(-n+4) { display: none; }
+      .nav-links { display: none; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -542,7 +600,16 @@
     <li><a href="about.html" class="active">About</a></li>
     <li><a href="/wristdesk" style="color:var(--gold);border:1px solid rgba(212,168,67,0.35);padding:0.3rem 0.85rem;border-radius:5px;letter-spacing:0.04em;transition:all 0.2s" onmouseover="this.style.background='rgba(212,168,67,0.1)';this.style.color='var(--gold)'" onmouseout="this.style.background='transparent'">WristDesk Pro</a></li>
   </ul>
+  <button class="nav-burger" id="nav-burger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Journals</a>
+  <a href="about.html">About</a>
+  <a href="#timeline">Career Timeline</a>
+  <a href="/wristdesk" class="gold">WristDesk Pro</a>
+</div>
 
 <!-- HERO -->
 <section class="about-hero">
@@ -783,5 +850,24 @@
 })();
 </script>
 
+
+<script>
+(function(){
+  var burger = document.getElementById('nav-burger');
+  var menu = document.getElementById('mobile-menu');
+  if (!burger) return;
+  burger.addEventListener('click', function(){
+    burger.classList.toggle('open');
+    menu.classList.toggle('open');
+  });
+  menu.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      burger.classList.remove('open');
+      menu.classList.remove('open');
+    });
+  });
+})();
+</script>
+<script data-goatcounter="https://daiviksuresh.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
